@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		85A861482665747E004AF43A /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 85A861472665747E004AF43A /* main.cpp */; };
+		85A8615026675ED7004AF43A /* Board.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 85A8614E26675ED7004AF43A /* Board.cpp */; };
+		85A8615326684B10004AF43A /* Tile.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 85A8615126684B10004AF43A /* Tile.cpp */; };
+		85A8615626684B28004AF43A /* Side.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 85A8615426684B28004AF43A /* Side.cpp */; };
+		85A8615926684B3E004AF43A /* Card.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 85A8615726684B3E004AF43A /* Card.cpp */; };
+		85A8615C26684B4F004AF43A /* Treasure.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 85A8615A26684B4F004AF43A /* Treasure.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +30,16 @@
 /* Begin PBXFileReference section */
 		85A861442665747E004AF43A /* amazing-labyrinth-cpp-commandLineMacOS */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "amazing-labyrinth-cpp-commandLineMacOS"; sourceTree = BUILT_PRODUCTS_DIR; };
 		85A861472665747E004AF43A /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		85A8614E26675ED7004AF43A /* Board.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Board.cpp; sourceTree = "<group>"; };
+		85A8614F26675ED7004AF43A /* Board.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Board.hpp; sourceTree = "<group>"; };
+		85A8615126684B10004AF43A /* Tile.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Tile.cpp; sourceTree = "<group>"; };
+		85A8615226684B10004AF43A /* Tile.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Tile.hpp; sourceTree = "<group>"; };
+		85A8615426684B28004AF43A /* Side.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Side.cpp; sourceTree = "<group>"; };
+		85A8615526684B28004AF43A /* Side.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Side.hpp; sourceTree = "<group>"; };
+		85A8615726684B3E004AF43A /* Card.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Card.cpp; sourceTree = "<group>"; };
+		85A8615826684B3E004AF43A /* Card.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Card.hpp; sourceTree = "<group>"; };
+		85A8615A26684B4F004AF43A /* Treasure.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Treasure.cpp; sourceTree = "<group>"; };
+		85A8615B26684B4F004AF43A /* Treasure.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Treasure.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +73,16 @@
 			isa = PBXGroup;
 			children = (
 				85A861472665747E004AF43A /* main.cpp */,
+				85A8615726684B3E004AF43A /* Card.cpp */,
+				85A8615A26684B4F004AF43A /* Treasure.cpp */,
+				85A8615B26684B4F004AF43A /* Treasure.hpp */,
+				85A8615826684B3E004AF43A /* Card.hpp */,
+				85A8615426684B28004AF43A /* Side.cpp */,
+				85A8615526684B28004AF43A /* Side.hpp */,
+				85A8615126684B10004AF43A /* Tile.cpp */,
+				85A8615226684B10004AF43A /* Tile.hpp */,
+				85A8614E26675ED7004AF43A /* Board.cpp */,
+				85A8614F26675ED7004AF43A /* Board.hpp */,
 			);
 			path = "amazing-labyrinth-cpp-commandLineMacOS";
 			sourceTree = "<group>";
@@ -118,7 +143,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				85A8615326684B10004AF43A /* Tile.cpp in Sources */,
+				85A8615026675ED7004AF43A /* Board.cpp in Sources */,
+				85A8615C26684B4F004AF43A /* Treasure.cpp in Sources */,
+				85A8615626684B28004AF43A /* Side.cpp in Sources */,
 				85A861482665747E004AF43A /* main.cpp in Sources */,
+				85A8615926684B3E004AF43A /* Card.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
