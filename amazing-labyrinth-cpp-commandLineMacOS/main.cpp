@@ -19,7 +19,7 @@ public:
     Side() {
         
     }
-    
+
     void setSidesArr(int index, bool open) {
         _sidesArr[index] = open;
     }
@@ -37,6 +37,7 @@ private:
 class Tile {
 public:
     Tile() {
+        // first create a new Side object, which has an array of 4 sides
         _sides = new Side;
         cout << "sides" << _sides << endl;
         
@@ -52,19 +53,19 @@ public:
                     isOpen = true;
                     hasOneSideOpen = true;
                     _sides->setSidesArr(i, isOpen);
-                    cout << isOpen << endl;
-//                    _sides[i] = isOpen;
                 }
                 else {
                     isOpen = false;
-                    cout << isOpen << endl;
-//                    _sides[i] = isOpen;
                 }
             }
         }
         _sides->printSidesArr();
     }
     
+    Side* getSides() {
+        _sides->printSidesArr();
+        return _sides;
+    }
     bool getIsMovable() {
         return isMovable;
     }
@@ -89,6 +90,14 @@ public:
         for (int i = 0; i < 8; i++) {
             // then for each item in the array, initialize to a Tile array size 8
             _board[i] = new Tile[8];
+        }
+        for (int j = 0; j < 8; j++) {
+            cout << _board[0]->getSides();
+            for (int k = 0; k < 8; k++) {
+                Tile* currentTile = &_board[j][k];
+                cout << currentTile << endl;
+//                cout << "board[j][k] " << &_board[j][k] << endl;
+            }
         }
     }
     
