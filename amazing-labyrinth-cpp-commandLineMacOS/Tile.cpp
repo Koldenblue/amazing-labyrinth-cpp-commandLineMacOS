@@ -6,3 +6,44 @@
 //
 
 #include "Tile.hpp"
+#include "Side.hpp"
+
+/** Constructor for a tile object, which has an bool array of 4 sides, which can be either open or closed */
+Tile::Tile() {
+    // first create a new Side object, which has an array of 4 sides
+    _sides = new Side;
+//        cout << "sides" << _sides << endl;s
+    
+    // randomly generate which sides of the tile are open,
+    // while making sure that at least one side is open.
+    bool hasOneSideOpen = false;
+    while (hasOneSideOpen == false) {
+        for (int i = 0; i < 4; i++) {
+            // set the sides array to contain the isOpen results.
+            //TODO
+            bool isOpen;
+            if ( (rand() % 2) == 1) {
+                isOpen = true;
+                hasOneSideOpen = true;
+                _sides->setSidesArr(i, isOpen);
+            }
+            else {
+                isOpen = false;
+            }
+        }
+    }
+    _sides->printSidesArr();
+}
+
+Side* Tile::getSides() {
+    _sides->printSidesArr();
+    return _sides;
+}
+
+bool Tile::getIsMovable() {
+    return isMovable;
+}
+void Tile::setIsMovable(bool movable) {
+    isMovable = movable;
+}
+

@@ -9,5 +9,16 @@
 #define Board_hpp
 
 #include <stdio.h>
+#include "Tile.hpp"
+#include <iostream>
 
 #endif /* Board_hpp */
+
+class Board {
+public:
+    Board();
+    Tile** getBoard(void);
+
+private:
+    Tile** _board;
+};
