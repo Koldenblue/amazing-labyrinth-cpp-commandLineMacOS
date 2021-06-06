@@ -12,7 +12,7 @@
 #include "Tile.hpp"
 #include <iostream>
 
-#endif /* Board_hpp */
+
 
 class Board {
 public:
@@ -22,3 +22,5 @@ public:
 private:
     Tile** _board;
 };
+
+#endif /* Board_hpp */

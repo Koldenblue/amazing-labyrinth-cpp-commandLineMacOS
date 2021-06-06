@@ -6,7 +6,7 @@
 //
 
 #include "Tile.hpp"
-#include "Side.hpp"
+// Side.hpp already included Tile.hpp
 
 /** Constructor for a tile object, which has an bool array of 4 sides, which can be either open or closed */
 Tile::Tile() {
@@ -32,12 +32,11 @@ Tile::Tile() {
             }
         }
     }
-    _sides->printSidesArr();
+//    _sides->printSidesArr();
 }
 
-Side* Tile::getSides() {
-    _sides->printSidesArr();
-    return _sides;
+string Tile::getSides() {
+    return _sides->to_string();
 }
 
 bool Tile::getIsMovable() {

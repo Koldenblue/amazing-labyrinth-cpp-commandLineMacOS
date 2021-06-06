@@ -14,15 +14,17 @@ Board::Board() {
         // then for each item in the array, initialize to a Tile array size 8
         _board[i] = new Tile[8];
     }
+    
     cout << "board[0] sides \n" << _board[0] << endl;
-        for (int j = 0; j < 8; j++) {
-            cout << _board[0]->getSides();
-            for (int k = 0; k < 8; k++) {
-                Tile* currentTile = &_board[j][k];
-                cout << currentTile << endl;
-                cout << "board[j][k] " << &_board[j][k] << endl;
-            }
+    
+    for (int j = 0; j < 8; j++) {
+//            cout << _board[0]->getSides();
+        for (int k = 0; k < 8; k++) {
+            Tile* currentTile = &_board[j][k];
+            cout << currentTile->getSides();
+            cout << ", Board.cpp, board[j][k], " << currentTile << endl;
         }
+    }
 }
 
 

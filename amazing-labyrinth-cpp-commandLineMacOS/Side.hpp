@@ -5,22 +5,23 @@
 //  Created by Kevin Miller on 6/2/21.
 //
 
-#ifndef Side_hpp
-#define Side_hpp
+#pragma once
+//pragma replaces the ifndef, def, and endif statements
 
 #include <stdio.h>
 #include <iostream>
 #include <cstdlib> // for rng
 using namespace std;
 
-#endif /* Side_hpp */
 
 class Side {
 public:
     void setSidesArr(int index, bool open);
     void printSidesArr();
+    string to_string();
 
 private:
     bool isOpen;
     bool _sidesArr[4];
 };
+

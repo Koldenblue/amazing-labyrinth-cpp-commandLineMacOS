@@ -14,13 +14,12 @@
 #include <iostream>
 using namespace std;
 
-#endif /* Tile_hpp */
-
+#include "Side.hpp"
 
 class Tile {
 public:
     Tile();
-    Side* getSides();
+    string getSides();
     bool getIsMovable();
     void setIsMovable(bool movable);
 
@@ -31,3 +30,6 @@ private:
     bool containsItem;
     string item;
 };
+
+#endif /* Tile_hpp */
+
