@@ -13,14 +13,13 @@
 #include <iostream>
 
 
-
 class Board {
+private:
+    Tile** _board;
+
 public:
     Board();
     Tile** getBoard(void);
-
-private:
-    Tile** _board;
 };
 
 #endif /* Board_hpp */

@@ -73,9 +73,9 @@
 			isa = PBXGroup;
 			children = (
 				85A861472665747E004AF43A /* main.cpp */,
-				85A8615726684B3E004AF43A /* Card.cpp */,
 				85A8615A26684B4F004AF43A /* Treasure.cpp */,
 				85A8615B26684B4F004AF43A /* Treasure.hpp */,
+				85A8615726684B3E004AF43A /* Card.cpp */,
 				85A8615826684B3E004AF43A /* Card.hpp */,
 				85A8615426684B28004AF43A /* Side.cpp */,
 				85A8615526684B28004AF43A /* Side.hpp */,

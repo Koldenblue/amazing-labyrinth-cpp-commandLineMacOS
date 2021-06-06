@@ -6,3 +6,11 @@
 //
 
 #include "Card.hpp"
+
+//Card::Card() {
+//    
+//}
+
+Treasure Card::getDepictedTreasure() {
+    return depictedTreasure;
+}

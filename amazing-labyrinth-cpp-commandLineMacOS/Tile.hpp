@@ -17,18 +17,19 @@ using namespace std;
 #include "Side.hpp"
 
 class Tile {
-public:
-    Tile();
-    string getSides();
-    bool getIsMovable();
-    void setIsMovable(bool movable);
-
 private:
     bool isMovable;
     Side* _sides;
     bool containsPlayer;
     bool containsItem;
     string item;
+    
+public:
+    Tile();
+    string getSides();
+    bool getIsMovable();
+    void setIsMovable(bool movable);
+
 };
 
 #endif /* Tile_hpp */

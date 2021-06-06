@@ -15,13 +15,14 @@ using namespace std;
 
 
 class Side {
+private:
+    bool isOpen;
+    bool _sidesArr[4];
+    
 public:
     void setSidesArr(int index, bool open);
     void printSidesArr();
     string to_string();
 
-private:
-    bool isOpen;
-    bool _sidesArr[4];
 };
 

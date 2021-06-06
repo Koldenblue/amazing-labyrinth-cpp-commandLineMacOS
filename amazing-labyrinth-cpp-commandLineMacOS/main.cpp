@@ -9,38 +9,12 @@
 #include <cstdlib> // for rng
 #include "Tile.hpp"
 #include "Board.hpp"
+#include "Treasure.hpp"
 using namespace std;
 
 
 const int player_count = 4;
 int current_player = 1;
-
-
-
-
-
-class Treasure {
-private:
-    string name;
-public:
-    string getName(void) {
-        return name;
-    }
-    void setName(string newName) {
-        name = newName;
-    }
-};
-
-
-class Card {
-private:
-    Treasure depictedTreasure;
-public:
-    Treasure getDepictedTreasure() {
-        return depictedTreasure;
-    }
-};
-
 
 int main(int argc, const char * argv[]) {
     // insert code here...
@@ -50,5 +24,19 @@ int main(int argc, const char * argv[]) {
     Board labyrinth;    // could also do Board* labyrinth = new Board(); labyrinth->getBoard();
     labyrinth.getBoard();
     
+    
+    
+    // TREASUrE NAME TESTS
+    Treasure testTreasure(1);
+    Treasure testTreasure2(25);
+    cout << "Treasure index 1:" << endl;
+    testTreasure.printName();
+    cout << "Treasure index 2:" << endl;
+    testTreasure2.printName();
+    string testName = testTreasure2.getName();
+    cout << "TTTTTTT" << testName << endl;
+    if (testName == "" ) {
+        cout << "TRUE" ;
+    }
     return 0;
 }

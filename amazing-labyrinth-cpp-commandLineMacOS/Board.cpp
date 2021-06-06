@@ -14,11 +14,9 @@ Board::Board() {
         // then for each item in the array, initialize to a Tile array size 8
         _board[i] = new Tile[8];
     }
-    
-    cout << "board[0] sides \n" << _board[0] << endl;
-    
+
+    // loop through 2d array, calling getSides function of Tile to print sides
     for (int j = 0; j < 8; j++) {
-//            cout << _board[0]->getSides();
         for (int k = 0; k < 8; k++) {
             Tile* currentTile = &_board[j][k];
             cout << currentTile->getSides();
