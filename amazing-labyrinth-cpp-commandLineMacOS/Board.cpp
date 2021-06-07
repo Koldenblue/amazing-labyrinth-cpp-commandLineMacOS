@@ -23,6 +23,8 @@ Board::Board() {
             cout << ", Board.cpp, board[j][k], " << currentTile << endl;
         }
     }
+    
+    // TODO: print out graphic board
 }
 
 
