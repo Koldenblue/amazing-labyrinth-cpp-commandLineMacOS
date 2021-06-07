@@ -10,6 +10,7 @@
 #include "Tile.hpp"
 #include "Board.hpp"
 #include "Treasure.hpp"
+#include "Player.hpp"
 using namespace std;
 
 
@@ -42,8 +43,17 @@ int main(int argc, const char * argv[]) {
         }
     }
     
+    // smart pointer, instead of using Player*. Smart pointers automatically delete and free memory
+    unique_ptr<Player> playerNum[player_count];
     // TODO: create players, deal hands
     for (int i = 0; i < player_count; i++) {
+        string playerColor;
+        cout << "What color is player " << i << "?" << endl;
+        cin >> playerColor;
+        cin.clear();
+//        getline(cin);
+        // smart pointer instead of just new Player(playerColor)
+        playerNum[i] = unique_ptr<Player>(new Player(playerColor));
         
     }
     

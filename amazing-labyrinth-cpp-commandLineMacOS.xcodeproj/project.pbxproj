@@ -13,6 +13,7 @@
 		85A8615626684B28004AF43A /* Side.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 85A8615426684B28004AF43A /* Side.cpp */; };
 		85A8615926684B3E004AF43A /* Card.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 85A8615726684B3E004AF43A /* Card.cpp */; };
 		85A8615C26684B4F004AF43A /* Treasure.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 85A8615A26684B4F004AF43A /* Treasure.cpp */; };
+		85C860A3266DBF0A00702370 /* Player.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 85C860A1266DBF0A00702370 /* Player.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -40,6 +41,8 @@
 		85A8615826684B3E004AF43A /* Card.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Card.hpp; sourceTree = "<group>"; };
 		85A8615A26684B4F004AF43A /* Treasure.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Treasure.cpp; sourceTree = "<group>"; };
 		85A8615B26684B4F004AF43A /* Treasure.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Treasure.hpp; sourceTree = "<group>"; };
+		85C860A1266DBF0A00702370 /* Player.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Player.cpp; sourceTree = "<group>"; };
+		85C860A2266DBF0A00702370 /* Player.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Player.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +76,8 @@
 			isa = PBXGroup;
 			children = (
 				85A861472665747E004AF43A /* main.cpp */,
+				85C860A1266DBF0A00702370 /* Player.cpp */,
+				85C860A2266DBF0A00702370 /* Player.hpp */,
 				85A8615A26684B4F004AF43A /* Treasure.cpp */,
 				85A8615B26684B4F004AF43A /* Treasure.hpp */,
 				85A8615726684B3E004AF43A /* Card.cpp */,
@@ -144,6 +149,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				85A8615326684B10004AF43A /* Tile.cpp in Sources */,
+				85C860A3266DBF0A00702370 /* Player.cpp in Sources */,
 				85A8615026675ED7004AF43A /* Board.cpp in Sources */,
 				85A8615C26684B4F004AF43A /* Treasure.cpp in Sources */,
 				85A8615626684B28004AF43A /* Side.cpp in Sources */,
