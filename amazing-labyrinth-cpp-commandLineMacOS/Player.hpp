@@ -12,6 +12,7 @@
 #include <string>
 using namespace std;
 
+
 class Player {
 private:
     string playerColor;
@@ -19,5 +20,8 @@ private:
 public:
     Player(string color);
     void setPlayerColor(string color);
+    string getPlayerColor();
+    void dealDeck(int numPlayers);
 };
+
 #endif /* Player_hpp */

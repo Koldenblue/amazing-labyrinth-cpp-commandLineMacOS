@@ -21,7 +21,7 @@ int main(int argc, const char * argv[]) {
     // insert code here...
     cout << "Hello, Player!" << endl;
     cout << "Here is the board." << endl;
-    
+
     // Create a new board.
     Board labyrinth;    // could also do Board* labyrinth = new Board(); labyrinth->getBoard();
     labyrinth.getBoard();
@@ -44,18 +44,21 @@ int main(int argc, const char * argv[]) {
     }
     
     // smart pointer, instead of using Player*. Smart pointers automatically delete and free memory
+    // get number of players and the color for each of them. Put each player object in the playerNum array
     unique_ptr<Player> playerNum[player_count];
-    // TODO: create players, deal hands
     for (int i = 0; i < player_count; i++) {
         string playerColor;
         cout << "What color is player " << i << "?" << endl;
-        cin >> playerColor;
-        cin.clear();
-//        getline(cin);
+        getline (cin, playerColor);
         // smart pointer instead of just new Player(playerColor)
         playerNum[i] = unique_ptr<Player>(new Player(playerColor));
         
+        cout << "You chose the color " << playerColor << "." << endl;
     }
+
+    cout << playerNum[0]->getPlayerColor() << endl;
+    
+
     
     // TREASURE NAME TESTS
 //    Treasure testTreasure(1);
@@ -69,5 +72,7 @@ int main(int argc, const char * argv[]) {
 //    if (testName == "" ) {
 //        cout << "TRUE" ;
 //    }
+
     return 0;
 }
+

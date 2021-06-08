@@ -25,4 +25,3 @@ public:
     string to_string();
 
 };
-

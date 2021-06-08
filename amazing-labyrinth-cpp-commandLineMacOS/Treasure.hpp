@@ -17,6 +17,7 @@ using namespace std;
 class Treasure {
 private:
     string name;
+    // There are 24 possible treasure names.
     vector<string> possibleNames = {
         "Genie in a Bottle",
         "Skull and Bone",
