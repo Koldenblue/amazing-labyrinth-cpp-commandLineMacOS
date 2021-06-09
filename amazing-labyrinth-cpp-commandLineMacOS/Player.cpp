@@ -23,11 +23,18 @@ int Player::getPlayerNumber() {
     return playerNumber;
 }
 
-void Player::dealDeck(int numPlayers) {
-    // first randomize the order of the treasure deck
-    unique_ptr<Treasure> treasureList;
-    vector<string> shuffledTreasures = treasureList->getShuffledNames();
-    playerDeck
+vector<string> Player::getPlayerDeck() {
+    return playerDeck;
+}
+
+void Player::dealDeck(int numPlayers, vector<string> treasures) {
+
+    // There are 24 cards in the deck. numPlayers varies from 2 to 4.
+    int cardsInDeck = 24 / numPlayers;
+    int startCard = playerNumber * cardsInDeck;
     
-    // then give each player an equal number of treasure cards in their deck
+    // finally, add the shuffled cards to the player deck.
+    for (int i = startCard, j = startCard + cardsInDeck; i < j; i++) {
+        playerDeck[i] = treasures[i];
+    }
 }

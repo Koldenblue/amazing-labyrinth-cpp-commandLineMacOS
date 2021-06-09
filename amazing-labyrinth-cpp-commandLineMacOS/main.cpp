@@ -13,13 +13,11 @@
 #include "Player.hpp"
 using namespace std;
 
-
-int player_count = 0;
-int current_player = 1;
-
 int main(int argc, const char * argv[]) {
-    // insert code here...
-    cout << "Hello, Player!" << endl;
+    int player_count = 0;           // Number of participants
+    int current_player = 0;
+    
+    cout << "=========== Hello, Player! =============" << endl;
     cout << "Here is the board." << endl;
 
     // Create a new board.
@@ -43,7 +41,6 @@ int main(int argc, const char * argv[]) {
         }
     }
     
-    // smart pointer, instead of using Player*. Smart pointers automatically delete and free memory
     // get number of players and the color for each of them. Put each player object in the playerNum array
     unique_ptr<Player> playerNum[player_count];
     for (int i = 0; i < player_count; i++) {
@@ -52,14 +49,17 @@ int main(int argc, const char * argv[]) {
         getline (cin, playerColor);
         // smart pointer instead of just new Player(playerColor)
         playerNum[i] = unique_ptr<Player>(new Player(playerColor, i));
-        
-        cout << "You chose the color " << playerColor << "." << endl;
     }
 
-    cout << playerNum[0]->getPlayerColor() << endl;
+    // first create a randomized treasure deck
+    unique_ptr<Treasure> treasureList;
+    // deal to each player from the randomized deck
+    for (int j = 0; j < player_count; j++) {
+        playerNum[j]->dealDeck(player_count, treasureList->getPossibleNames());
+    }
     
-    Treasure testTreasure(1);
-    testTreasure.getShuffledNames();
+    
+    
     
     
     // TREASURE NAME TESTS

@@ -10,8 +10,8 @@
 
 #include <stdio.h>
 #include <string>
+#include <vector>
 using namespace std;
-
 
 class Player {
 private:
@@ -22,8 +22,9 @@ private:
 public:
     Player(string color, int playerNum);
     string getPlayerColor();
+    vector<string> getPlayerDeck();
     int getPlayerNumber();
-    void dealDeck(int numPlayers);
+    void dealDeck(int numPlayers, vector<string> treasures);
 };
 
 #endif /* Player_hpp */

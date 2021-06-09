@@ -23,22 +23,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "77DEB226-0F86-4331-BB69-B790D0B5FA46"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "amazing-labyrinth-cpp-commandLineMacOS/Treasure.cpp"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "48"
-            endingLineNumber = "48"
-            landmarkName = "unknown"
-            landmarkType = "0">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "7BEC8FCB-C2B7-4888-8EE1-52C225EB7629"
             shouldBeEnabled = "No"
             ignoreCount = "0"
@@ -46,9 +30,9 @@
             filePath = "amazing-labyrinth-cpp-commandLineMacOS/Player.cpp"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "26"
-            endingLineNumber = "26"
-            landmarkName = "Player::dealDeck(numPlayers)"
+            startingLineNumber = "30"
+            endingLineNumber = "30"
+            landmarkName = "Player::dealDeck(numPlayers, treasures)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

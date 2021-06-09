@@ -46,11 +46,11 @@ private:
     };
 
 public:
-    Treasure(int nameIndex);
+    Treasure();
     vector<string> getPossibleNames();
-    vector<string> getShuffledNames();
-    string getName(void);
-    void printName(void);
+    void shuffleNames();
+    string getName(int nameIndex);
+    void printName(int nameIndex);
 };
 
 #endif /* Treasure_hpp */
