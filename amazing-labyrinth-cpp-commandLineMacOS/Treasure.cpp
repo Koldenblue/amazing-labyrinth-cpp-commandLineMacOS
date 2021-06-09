@@ -9,21 +9,40 @@
 #include <iostream>
 using namespace std;
 
-/** Should assign a unique treasure name at instantiation */
+/** Consrtuctor should assign a unique treasure name at instantiation */
 Treasure::Treasure(int nameIndex) {
-    setName(nameIndex);
+    name = possibleNames[nameIndex];
 }
 
 string Treasure::getName(void) {
     return name;
 }
 
-void Treasure::setName(int nameIndex) {
-    name = possibleNames[nameIndex];
-}
-
 void Treasure::printName(void) {
     cout << name << endl;
+}
+
+vector<string> Treasure::getPossibleNames() {
+    return possibleNames;
+}
+
+// returns the possibleNames vector after shuffling
+vector<string> Treasure::getShuffledNames() {
+    vector<string> namesCopy = possibleNames;
+    // TODO: test shuffled array. Find out if array is a copy, or the same memory location
+    cout << "VECTOR FUNCTIONS" << namesCopy.size() << endl;
+    cout << "vector shuffle" << endl;
+    
+    // shuffle array by swapping random element with last element
+    for (int i = static_cast<int>(namesCopy.size()); i > 0; i--) {
+        int randomIndex = rand() % i;
+        
+        string temp = namesCopy[i];
+        namesCopy[i] = namesCopy[randomIndex];
+        namesCopy[randomIndex] = temp;
+    }
+    
+    return namesCopy;
 }
 /** =================== Treasure Names =====================
  Genie in a Bottle

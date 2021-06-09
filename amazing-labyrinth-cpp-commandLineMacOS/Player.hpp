@@ -16,11 +16,13 @@ using namespace std;
 class Player {
 private:
     string playerColor;
+    vector<string> playerDeck;
+    int playerNumber;
     
 public:
-    Player(string color);
-    void setPlayerColor(string color);
+    Player(string color, int playerNum);
     string getPlayerColor();
+    int getPlayerNumber();
     void dealDeck(int numPlayers);
 };
 

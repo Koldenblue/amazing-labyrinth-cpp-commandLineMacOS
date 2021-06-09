@@ -47,8 +47,9 @@ private:
 
 public:
     Treasure(int nameIndex);
+    vector<string> getPossibleNames();
+    vector<string> getShuffledNames();
     string getName(void);
-    void setName(int nameIndex);
     void printName(void);
 };
 

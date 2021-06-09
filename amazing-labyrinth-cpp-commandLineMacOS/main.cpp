@@ -51,14 +51,16 @@ int main(int argc, const char * argv[]) {
         cout << "What color is player " << i << "?" << endl;
         getline (cin, playerColor);
         // smart pointer instead of just new Player(playerColor)
-        playerNum[i] = unique_ptr<Player>(new Player(playerColor));
+        playerNum[i] = unique_ptr<Player>(new Player(playerColor, i));
         
         cout << "You chose the color " << playerColor << "." << endl;
     }
 
     cout << playerNum[0]->getPlayerColor() << endl;
     
-
+    Treasure testTreasure(1);
+    testTreasure.getShuffledNames();
+    
     
     // TREASURE NAME TESTS
 //    Treasure testTreasure(1);

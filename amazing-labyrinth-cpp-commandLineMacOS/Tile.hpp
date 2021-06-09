@@ -10,7 +10,6 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-#include <cstdlib> // for rng
 #include <iostream>
 using namespace std;
 
