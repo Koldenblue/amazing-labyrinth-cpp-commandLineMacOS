@@ -14,7 +14,6 @@ Player::Player(string color, int playerNum) {
     playerNumber = playerNum;
 }
 
-
 string Player::getPlayerColor() {
     return playerColor;
 }
@@ -35,6 +34,6 @@ void Player::dealDeck(int numPlayers, vector<string> treasures) {
     
     // finally, add the shuffled cards to the player deck.
     for (int i = startCard, j = startCard + cardsInDeck; i < j; i++) {
-        playerDeck[i] = treasures[i];
+        playerDeck.push_back(treasures[i]);
     }
 }

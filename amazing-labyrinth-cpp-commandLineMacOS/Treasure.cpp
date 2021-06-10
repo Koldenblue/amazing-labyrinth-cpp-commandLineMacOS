@@ -9,7 +9,6 @@
 #include <iostream>
 using namespace std;
 
-/** Consrtuctor should assign a unique treasure name at instantiation */
 Treasure::Treasure() {
     shuffleNames();
 }
@@ -26,7 +25,7 @@ vector<string> Treasure::getPossibleNames() {
     return possibleNames;
 }
 
-/** returns the possibleNames vector after shuffling */
+/** shuffles the possibleNames vector */
 void Treasure::shuffleNames() {
     // TODO: test shuffled array. Find out if array is a copy, or the same memory location
     // shuffle array by swapping random element with last element

@@ -35,6 +35,7 @@ Tile::Tile() {
 //    _sides->printSidesArr();
 }
 
+/** Prints out the 4 sides of a tile, open or closed */
 string Tile::getSides() {
     return _sides->to_string();
 }

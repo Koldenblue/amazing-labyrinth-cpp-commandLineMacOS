@@ -15,22 +15,22 @@ Board::Board() {
         _board[i] = new Tile[8];
     }
 
-    // loop through 2d array, calling getSides function of Tile to print sides
+    // loop through 2d array, creating a new pointer to a Tile for each array location
     for (int j = 0; j < 8; j++) {
         for (int k = 0; k < 8; k++) {
+            // should this be &??
             Tile* currentTile = &_board[j][k];
-            cout << currentTile->getSides();
-            cout << ", Board.cpp, board[j][k], " << currentTile << endl;
+//            cout << currentTile->getSides();
+//            cout << ", Board.cpp, board[j][k], " << currentTile << endl;
         }
     }
-    
     // TODO: print out graphic board
 }
 
 
 // outputs a 2 dimensional Tile** array
 Tile** Board::getBoard(void) {
-    cout << "get board function" << endl;
-    cout << _board;
+//    cout << "get board function" << endl;
+//    cout << _board;
     return _board;
 }

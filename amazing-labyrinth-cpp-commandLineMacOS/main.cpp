@@ -21,23 +21,21 @@ int main(int argc, const char * argv[]) {
     cout << "Here is the board." << endl;
 
     // Create a new board.
-    Board labyrinth;    // could also do Board* labyrinth = new Board(); labyrinth->getBoard();
+    Board labyrinth;
     labyrinth.getBoard();
     
     // Get number of players participating.
     while (player_count < 2 || player_count > 4) {
         cout << "Number of players? Must be 2 - 4 players." << endl;
         cin >> player_count;
-        // clear buffer - if a char gets entered, the cin buffer doesn't clear
+        // clear buffer - if a char rather than int gets entered, the cin buffer doesn't clear
         cin.clear();
         // make sure a new line gets printed if a char gets entered
         cin.ignore(numeric_limits<streamsize>::max(), '\n');
-
         if (player_count < 2 || player_count > 4) {
             cout << "Must be 2-4 players." << endl;
-        }
-        {
-            cout << "number of players is " << player_count << endl;
+        } else {
+            cout << "number of players is " << player_count << "." << endl;
         }
     }
     
@@ -51,14 +49,18 @@ int main(int argc, const char * argv[]) {
         playerNum[i] = unique_ptr<Player>(new Player(playerColor, i));
     }
 
-    // first create a randomized treasure deck
-    unique_ptr<Treasure> treasureList;
+    // Create a randomized treasure deck
+    Treasure treasureList;
     // deal to each player from the randomized deck
+    vector<string> possibleNames = treasureList.getPossibleNames();
     for (int j = 0; j < player_count; j++) {
-        playerNum[j]->dealDeck(player_count, treasureList->getPossibleNames());
+        cout << "playerNum[j]" << playerNum[j] << endl;
+        playerNum[j]->dealDeck(player_count, possibleNames);
     }
     
-    
+    for (int x = 0; x < (24 / player_count); x++) {
+        cout << "card in deck  :" << playerNum[0]->getPlayerDeck()[x] << endl; // ERROR HERE
+    }
     
     
     
