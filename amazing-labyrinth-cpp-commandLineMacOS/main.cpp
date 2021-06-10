@@ -58,25 +58,25 @@ int main(int argc, const char * argv[]) {
         playerNum[j]->dealDeck(player_count, possibleNames);
     }
     
-    for (int x = 0; x < (24 / player_count); x++) {
-        cout << "card in deck  :" << playerNum[0]->getPlayerDeck()[x] << endl; // ERROR HERE
-    }
-    
-    
-    
-    // TREASURE NAME TESTS
-//    Treasure testTreasure(1);
-//    Treasure testTreasure2(25);
-//    cout << "Treasure index 1:" << endl;
-//    testTreasure.printName();
-//    cout << "Treasure index 2:" << endl;
-//    testTreasure2.printName();
-//    string testName = testTreasure2.getName();
-//    cout << "TTTTTTT" << testName << endl;
-//    if (testName == "" ) {
-//        cout << "TRUE" ;
-//    }
+    // create the board layout.
 
+    // place the player pieces at board locations.
+    
+    // have each player draw a card.
+    
+    // start turn sequence - a player shifts the board, then moves a piece. Board cannot be shifted in opposite direction to previous turn. If player moves to treasure, player draws next card. If no more cards, player mush go home to win.
+    
+    
+//    // Player Deck Tests
+//    for (int x = 0; x < (24 / player_count); x++) {
+//        cout << "card in deck 1 :" << playerNum[0]->getPlayerDeck()[x] << endl;
+//    }
+//
+//    for (int x = 0; x < (24 / player_count); x++) {
+//        cout << "card in deck 2 :" << playerNum[1]->getPlayerDeck()[x] << endl;
+//    }
+//
+    
     return 0;
 }
 

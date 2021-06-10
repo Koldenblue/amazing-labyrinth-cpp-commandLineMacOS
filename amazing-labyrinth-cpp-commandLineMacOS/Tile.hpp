@@ -11,9 +11,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <iostream>
+#include "Side.hpp"
 using namespace std;
 
-#include "Side.hpp"
 
 class Tile {
 private:
