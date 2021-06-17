@@ -45,17 +45,16 @@ int main(int argc, const char * argv[]) {
         string playerColor;
         cout << "What color is player " << i << "?" << endl;
         getline (cin, playerColor);
-        // smart pointer instead of just new Player(playerColor)
         playerNum[i] = unique_ptr<Player>(new Player(playerColor, i));
     }
 
     // Create a randomized treasure deck
     Treasure treasureList;
     // deal to each player from the randomized deck
-    vector<string> possibleNames = treasureList.getPossibleNames();
+    vector<string> possibleNamesVector = treasureList.getPossibleNames();
     for (int j = 0; j < player_count; j++) {
-        cout << "playerNum[j]" << playerNum[j] << endl;
-        playerNum[j]->dealDeck(player_count, possibleNames);
+        cout << "playerNum[j] is the color " << playerNum[j]->getPlayerColor() << endl;
+        playerNum[j]->dealDeck(player_count, possibleNamesVector);
     }
     
     // create the board layout.

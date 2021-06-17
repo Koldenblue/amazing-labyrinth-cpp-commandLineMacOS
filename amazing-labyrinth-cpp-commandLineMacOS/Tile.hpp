@@ -28,8 +28,6 @@ public:
     string getSides();
     bool getIsMovable();
     void setIsMovable(bool movable);
-
 };
 
 #endif /* Tile_hpp */
-
