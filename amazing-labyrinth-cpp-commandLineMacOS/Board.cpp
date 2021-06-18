@@ -30,7 +30,8 @@ Board::Board() {
 
 // outputs a 2 dimensional Tile** array
 Tile** Board::getBoard(void) {
-//    cout << "get board function" << endl;
-//    cout << _board;
+    cout << "get board function" << endl;
+    Tile* currentTile = &_board[1][1];
+    cout << currentTile->getSides();
     return _board;
 }

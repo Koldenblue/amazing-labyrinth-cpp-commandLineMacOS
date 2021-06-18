@@ -18,12 +18,7 @@ int main(int argc, const char * argv[]) {
     int current_player = 0;
     
     cout << "=========== Hello, Player! =============" << endl;
-    cout << "Here is the board." << endl;
 
-    // Create a new board.
-    Board labyrinth;
-    labyrinth.getBoard();
-    
     // Get number of players participating.
     while (player_count < 2 || player_count > 4) {
         cout << "Number of players? Must be 2 - 4 players." << endl;
@@ -57,8 +52,11 @@ int main(int argc, const char * argv[]) {
         playerNum[j]->dealDeck(player_count, possibleNamesVector);
     }
     
-    // create the board layout.
+    // Create a new board.
+    Board labyrinth;
+    labyrinth.getBoard();
 
+    
     // place the player pieces at board locations.
     
     // have each player draw a card.
